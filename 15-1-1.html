@@ -12,18 +12,20 @@
     <script>
         let date = new Date();
 
-        //字串變數，預設空值
+
         let strTime = '';
 
-        //串接時間
+
         strTime += date.getFullYear();
+        // strTime = strTime + date.getFullYear();
+
         strTime += date.getMonth() + 1;
         strTime += date.getDate();
         strTime += date.getHours();
         strTime += date.getMinutes();
         strTime += date.getSeconds();
 
-        //輸出結果
+
         console.log(strTime);
     </script>
 </body>

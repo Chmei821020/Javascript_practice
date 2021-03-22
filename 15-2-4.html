@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="txt">Hello World</p>
+    <script>
+        var myVar;
+
+        //定義函式
+        function myStartFunction() {
+            myVar = setTimeout(alertFunc, 3000, "Hi", "你好");
+        }
+
+        //此函式用在 myStartFunction 當中
+        function alertFunc(param1, param2) {
+            alert(`你的參數: ${param1}, ${param2}`);
+        }
+
+        //執行函式
+        myStartFunction();
+    </script>
+</body>
+
+</html>
