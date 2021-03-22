@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let obj01 = { name: "Charlotte", age: 27 };
+        let obj02 = {};
+        for (let key in obj01) {
+            obj02[key] = obj01[key];
+        }
+        console.log(obj01);
+        console.log(obj02);
+
+        let obj03 = { name: "Charlotte", age: 18 };
+        let strJson = JSON.stringify(obj03);
+        let obj04 = JSON.parse(strJson);
+        console.log(obj03);
+        delete obj04.name;
+        console.log(obj04);
+    </script>
+</body>
+
+</html>

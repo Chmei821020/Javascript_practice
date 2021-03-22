@@ -5,17 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>for continue</title>
+    <title>Document</title>
 </head>
 
 <body>
     <script>
-        for (let i = 1; i <= 12; i++) {
-            if (i == 6) {
-                continue;
+        strNum = 9487;
+
+        function makeFunc() {
+            var strName = 'Charlotte';
+            let displayName = () => {
+                console.log(strName + ' 說: ' + strNum);
             }
-            console.log(`i = ${i}`);
+
+            displayName();
         }
+        makeFunc();
 
     </script>
 </body>

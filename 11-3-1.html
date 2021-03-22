@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let objPerson = {
+            name: "Charlotte",
+            age: 27,
+            hairColor: 'black',
+            skinColor: 'beige',
+        };
+        objPerson.hadShoes = true;
+        objPerson.isWoken = true;
+
+        objPerson.age = 26;
+        console.log(objPerson);
+
+        delete objPerson.skinColor;
+        console.log(objPerson);
+    </script>
+</body>
+
+</html>
