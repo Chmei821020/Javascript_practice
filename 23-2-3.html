@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawbee</title>
+    <style>
+        canvas#canvas {
+            border: 2px dashed lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas" width="200" height="200"></canvas>
+
+    <script>
+        let canvas = document.getElementById("canvas");
+        let ctx = canvas.getContext("2d");
+
+        //定義畫「實心圓形」還是畫「圓線」的函式
+        let circle = function (x, y, radius, fillCircle) {
+            ctx.beginPath();
+            ctx.arc(x, y, radius, 0, Math.PI * 2, false);
+
+            //true 就填滿，false 就畫線
+            if (fillCircle) {
+                ctx.fill();
+            } else {
+                ctx.stroke();
+            }
+        }
+
+        //繪製蜜蜂的函式
+        let drawBee = function (x, y) {
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = 'black';
+            ctx.fillStyle = 'gold';
+            circle(x, y, 8, true);
+            circle(x, y, 8, false);
+
+            //畫左上角的圓圈當耳朵
+            circle(x - 5, y - 11, 5, false);
+
+            //畫右上角的圓圈當耳朵
+            circle(x + 5, y - 11, 5, false);
+
+            //畫小小黑色圓，放在黃色實心圓中間靠左
+            circle(x - 2, y - 1, 2, false);
+
+            //畫小小黑色圓，放在黃色實心圓中間靠右
+            circle(x + 2, y - 1, 2, false);
+        }
+
+
+        let update = function (position) {
+            let offset = Math.random() * 4 - 2;
+            position += offset;
+            if (position > 200) {
+                position = 200;
+            }
+            if (position < 0) {
+                position = 0;
+            }
+            return position;
+        }
+
+        let x = 100;
+        let y = 100;
+        setInterval(function () {
+
+        }, 30);
+
+    </script>
+
+</body>
+
+</html>
